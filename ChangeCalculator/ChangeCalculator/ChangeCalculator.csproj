@@ -55,6 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Denominations.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -62,6 +66,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Denominations.xaml.cs">
+      <DependentUpon>Denominations.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -94,6 +101,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\dime.png" />
+    <Resource Include="Images\fiftyBill.jpg" />
+    <Resource Include="Images\fiveBill.jpg" />
+    <Resource Include="Images\nickel.jpg" />
+    <Resource Include="Images\oneBill.jpg" />
+    <Resource Include="Images\oneHundredBill.jpg" />
+    <Resource Include="Images\penny.png" />
+    <Resource Include="Images\quarter.JPG" />
+    <Resource Include="Images\tenBill.jpg" />
+    <Resource Include="Images\twentyBill.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

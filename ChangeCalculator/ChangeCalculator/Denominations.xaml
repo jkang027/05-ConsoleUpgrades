@@ -1,0 +1,60 @@
+﻿<Window x:Class="ChangeCalculator.Denominations"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChangeCalculator"
+        mc:Ignorable="d"
+        Title="Denominations" Height="300" Width="300">
+    <Grid>
+        <Image x:Name="oneHundredBill" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="40
+               " Source="Images/oneHundredBill.jpg" Margin="10,10,0,0"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="40
+               " Margin="78,10,0,0" Source="Images/fiftyBill.jpg"/>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="100" Margin="146,10,0,0" VerticalAlignment="Top" Width="40" Source="Images/twentyBill.jpg"/>
+        <Image x:Name="image2" HorizontalAlignment="Left" Height="88" Margin="189,37,0,0" VerticalAlignment="Top" Width="94" Source="Images/tenBill.jpg" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="image3" HorizontalAlignment="Left" Height="100" Margin="-18,151,0,0" VerticalAlignment="Top" Width="94" Source="Images/fiveBill.jpg" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="image4" HorizontalAlignment="Left" Height="100" Margin="51,151,0,0" VerticalAlignment="Top" Width="94" Source="Images/oneBill.jpg" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="image5" HorizontalAlignment="Left" Height="30" Margin="146,132,0,0" VerticalAlignment="Top" Width="30" Source="Images/quarter.JPG"/>
+        <Image x:Name="image6" HorizontalAlignment="Left" Height="53" Margin="210,132,0,0" VerticalAlignment="Top" Width="30" Source="Images/dime.png"/>
+        <Image x:Name="image7" HorizontalAlignment="Left" Height="41" Margin="146,183,0,0" VerticalAlignment="Top" Width="30" Source="Images/nickel.jpg"/>
+        <Image x:Name="image8" HorizontalAlignment="Left" Height="35" Margin="210,183,0,0" VerticalAlignment="Top" Width="30" Source="Images/penny.png"/>
+        <TextBlock x:Name="hundredsBlock" HorizontalAlignment="Left" Margin="50,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="28" Height="32"/>
+        <TextBlock x:Name="fiftiesBlock" HorizontalAlignment="Left" Margin="118,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="28" Height="32"/>
+        <TextBlock x:Name="twentiesBlock" HorizontalAlignment="Left" Margin="186,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="29"/>
+        <TextBlock x:Name="onesBlock" HorizontalAlignment="Left" Margin="118,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="28"/>
+        <TextBlock x:Name="quartersBlock" HorizontalAlignment="Left" Margin="176,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="29" Height="30"/>
+        <TextBlock x:Name="dimesBlock" HorizontalAlignment="Left" Margin="240,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="30"/>
+        <TextBlock x:Name="nickelsBlock" HorizontalAlignment="Left" Margin="181,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" Width="24"/>
+        <TextBlock x:Name="penniesBlock" HorizontalAlignment="Left" Margin="245,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" Width="25"/>
+        <TextBlock x:Name="tensBlock" HorizontalAlignment="Left" Margin="257,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="35"/>
+        <TextBlock x:Name="fivesBlock" HorizontalAlignment="Left" Margin="50,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="28"/>
+    </Grid>
+</Window>

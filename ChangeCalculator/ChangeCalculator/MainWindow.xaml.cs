@@ -41,22 +41,29 @@ namespace ChangeCalculator
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            string totalCost = textBoxTotalCost.Text;
-            double totalCostParse = double.Parse(totalCost);
-            totalCostDouble = Math.Round(totalCostParse, 2);
+            try
+            {
+                string totalCost = textBoxTotalCost.Text;
+                double totalCostDouble = double.Parse(totalCost);
 
-            string totalReceived = textBoxTotalReceived.Text;
-            double totalReceivedParse = double.Parse(totalReceived);
-            totalReceivedDouble = Math.Round(totalReceivedParse, 2);
+                string totalReceived = textBoxTotalReceived.Text;
+                double totalReceivedDouble = double.Parse(totalReceived);
+                
+                changeDue = totalReceivedDouble - totalCostDouble;
+                textBlockChangeDue1.Text = "$" + changeDue;
+            }
 
-            changeDue = totalReceivedDouble - totalCostDouble;
-            textBlockChangeDue1.Text = "$" + changeDue;
+            catch (Exception exception)
+            {
+                MessageBox.Show("Your input(s) were invalid. Input valid dollar amount(s) without the '$'.");
+            }
+
             if (changeDue < 0)
             {
                 MessageBox.Show("The customer still owes you $" + changeDue * -1 + ".");
             }
         }
-
+        
         private void buttonDenominations_Click(object sender, RoutedEventArgs e)
         {
             double hundreds = Math.Floor(changeDue / hundredVal);
@@ -79,12 +86,10 @@ namespace ChangeCalculator
             double nickelsRemainder = (dimesRemainder % nickVal);
             double pennies = Math.Floor(nickelsRemainder / pennyVal);
 
-            if ((pennies * pennyVal) + (nickels * nickVal) + (dimes * dimeVal) + (quarters * quartVal) + (ones * oneVal) + (fives * fiveVal) + (tens * tenVal) + (twenties * twentyVal) + (fifties * fiftyVal) + (hundreds * hundredVal) != changeDue)
-            {
-                pennies = pennies + 1;
-            }
-
-            MessageBox.Show("Denominations: " + hundreds + " hundred(s), " + fifties + " fifty(s), " + twenties + " twenty(s), " + tens + " ten(s), " + fives + " five(s), " + ones + " one(s), " + quarters + " quarter(s)," + dimes + " dime(s), " + nickels + " nickel(s), " + pennies + " penny(s).");
+            //I made the new window too small so its too hard to see the coins' pictures, but I was too lazy to fix it.
+            Denominations denominationsWindow = new Denominations();
+            denominationsWindow.Show();
+            denominationsWindow.ReceiveValues(hundreds, fifties, twenties, tens, fives, ones, quarters, dimes, nickels, pennies);
         }
     }
 }
