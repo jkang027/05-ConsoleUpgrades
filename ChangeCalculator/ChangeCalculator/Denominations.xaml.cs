@@ -24,7 +24,7 @@ namespace ChangeCalculator
             InitializeComponent();
         }
 
-        public void ReceiveValues(double hundreds, double fifties, double twenties, double tens, double fives, double ones, double quarters, double dimes, double nickels, double pennies)
+        public void ReceiveValues(decimal hundreds, decimal fifties, decimal twenties, decimal tens, decimal fives, decimal ones, decimal quarters, decimal dimes, decimal nickels, decimal pennies)
         {
             hundredsBlock.Text = "x " + hundreds;
             fiftiesBlock.Text = "x " + fifties;
